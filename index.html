@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>CAT | columbia access television</title>
+    <meta http-equiv="content-type"
+		content="text/html;charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto+Condensed:300,400,700|Roboto:300,400,400i,700,700i" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="slideshow.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+
+<div class="verytop">
+<!-- ===============donate, submit, channel==================== -->
+ <div class="cds">
+<input id="searchbar" type="text" name="search" placeholder="Search..">
+   <div id="channel"><img src="channel.png" alt="channel"/></div>
+<div class="ds">
+   <div id="donate"><a href="donate.html">Donate</a></div>
+   <div id="submit"><a href="submit.html">Submit</a></div>
+</div>
+
+ </div>
+<!-- =========================desktop logo====================== -->
+    <a href="index.html"><img id="Logo-Desktop" src="Logo-Desktop.png" alt "CAT logo" width="100px"/></a>
+</div>
+
+<!-- ====================mobile logo==================== -->
+  <div class="three">
+      <div id="mobilelogo"><a href="index.html"><img id="mobilelogo" src="logo.jpeg" alt="CAT logo"/></a></div>
+      <img id="search" src="search.jpg" alt="search"/>
+
+<!-- ========================navigation================================== -->
+<div class="burger">
+    <a class="menu-trigger" href="#">&#9776;</a> </div>
+</div>
+    <nav>
+    <ul id="navigation">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="watch.html">Watch</a></li>
+      <li><a href="membership.html">Membership</a></li>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="learn.html">Learn/Use</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="verytop_mobile">
+  <!-- ===============donate, submit, channel==================== -->
+   <div class="cds">
+     <div id="channel"><img src="channel.png" alt="channel"/></div>
+  <div class="ds">
+     <div id="donate"><a href="donate.html">Donate</a></div>
+     <div id="submit"><a href="submit.html">Submit</a></div>
+  </div>
+   </div>
+  <!-- =========================desktop logo====================== -->
+      <a href="index.html"><img id="Logo-Desktop" src="Logo-Desktop.png" alt "CAT logo" width="100px"/></a>
+  </div>
+
+
+
+<!-- ===========================slideshow=========================== -->
+<!-- #region Jssor Slider Begin -->
+<!-- This code works with jquery library. -->
+<script src="jquery-1.11.3.min.js" type="text/javascript"></script>
+<script src="jssor.slider-22.0.6.mini.js" type="text/javascript"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+
+        var jssor_1_SlideoTransitions = [
+          [{b:-1,d:1,o:-1},{b:0,d:1000,o:1}],
+          [{b:1900,d:2000,x:-379,e:{x:7}}],
+          [{b:1900,d:2000,x:-379,e:{x:7}}],
+          [{b:-1,d:1,o:-1,r:288,sX:9,sY:9},{b:1000,d:900,x:-1400,y:-660,o:1,r:-288,sX:-9,sY:-9,e:{r:6}},{b:1900,d:1600,x:-200,o:-1,e:{x:16}}]
+        ];
+
+        var jssor_1_options = {
+          $AutoPlay: true,
+          $SlideDuration: 800,
+          $SlideEasing: $Jease$.$OutQuint,
+          $CaptionSliderOptions: {
+            $Class: $JssorCaptionSlideo$,
+            $Transitions: jssor_1_SlideoTransitions
+          },
+          $ArrowNavigatorOptions: {
+            $Class: $JssorArrowNavigator$
+          },
+          $BulletNavigatorOptions: {
+            $Class: $JssorBulletNavigator$
+          }
+        };
+
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+        /*responsive code begin*/
+        /*you can remove responsive code if you don't want the slider scales while window resizing*/
+        function ScaleSlider() {
+            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+            if (refSize) {
+                refSize = Math.min(refSize, 1920);
+                jssor_1_slider.$ScaleWidth(refSize);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 30);
+            }
+        }
+        ScaleSlider();
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        /*responsive code end*/
+    });
+</script>
+<style>
+    /* jssor slider bullet navigator skin 05 css */
+    /*
+    .jssorb05 div           (normal)
+    .jssorb05 div:hover     (normal mouseover)
+    .jssorb05 .av           (active)
+    .jssorb05 .av:hover     (active mouseover)
+    .jssorb05 .dn           (mousedown)
+    */
+    .jssorb05 {
+        position: absolute;
+    }
+    .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+        position: absolute;
+        /* size of bullet elment */
+        width: 16px;
+        height: 16px;
+        background: url('b05.png') no-repeat;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    .jssorb05 div { background-position: -7px -7px; }
+    .jssorb05 div:hover, .jssorb05 .av:hover { background-position: -37px -7px; }
+    .jssorb05 .av { background-position: -67px -7px; }
+    .jssorb05 .dn, .jssorb05 .dn:hover { background-position: -97px -7px; }
+
+    /* jssor slider arrow navigator skin 22 css */
+    /*
+    .jssora22l                  (normal)
+    .jssora22r                  (normal)
+    .jssora22l:hover            (normal mouseover)
+    .jssora22r:hover            (normal mouseover)
+    .jssora22l.jssora22ldn      (mousedown)
+    .jssora22r.jssora22rdn      (mousedown)
+    .jssora22l.jssora22lds      (disabled)
+    .jssora22r.jssora22rds      (disabled)
+    */
+    .jssora22l, .jssora22r {
+        display: block;
+        position: absolute;
+        /* size of arrow element */
+        width: 40px;
+        height: 58px;
+        cursor: pointer;
+        background: url('a22.png') center center no-repeat;
+        overflow: hidden;
+    }
+    .jssora22l { background-position: -10px -31px; }
+    .jssora22r { background-position: -70px -31px; }
+    .jssora22l:hover { background-position: -130px -31px; }
+    .jssora22r:hover { background-position: -190px -31px; }
+    .jssora22l.jssora22ldn { background-position: -250px -31px; }
+    .jssora22r.jssora22rdn { background-position: -310px -31px; }
+    .jssora22l.jssora22lds { background-position: -10px -31px; opacity: .3; pointer-events: none; }
+    .jssora22r.jssora22rds { background-position: -70px -31px; opacity: .3; pointer-events: none; }
+</style>
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: -15px; left: 0px; width: 1300px; height: 600px; overflow: hidden; visibility: hidden;">
+    <!-- Loading Screen -->
+    <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+        <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+        <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+    </div>
+    <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 600px; overflow: hidden;">
+        <div data-p="225.00">
+              <a href="https://www.facebook.com/columbiaaccesstv"><img data-u="image" src="CATimg/catdebates.jpg" /></a>
+        </div>
+        <a data-u="any" href="http://www.jssor.com" style="display:none">Full Width Slider</a>
+
+        <div data-p="225.00" style="display: none;">
+            <a href="https://www.facebook.com/columbiaaccesstv"><img data-u="image" src="CATimg/catkids.jpg" /></a>
+        </div>
+        <div data-p="225.00" data-po="80% 55%" style="display: none;">
+            <a href="https://www.facebook.com/columbiaaccesstv"><img data-u="image" src="CATimg/catnrnb.jpg" /></a>
+        </div>
+    </div>
+    <!-- Bullet Navigator -->
+    <div data-u="navigator" class="jssorb05" style="bottom:16px;right:16px;" data-autocenter="1">
+        <!-- bullet navigator item prototype -->
+        <div data-u="prototype" style="width:16px;height:16px;"></div>
+    </div>
+    <!-- Arrow Navigator -->
+    <span data-u="arrowleft" class="jssora22l" style="top:0px;left:8px;width:40px;height:58px;" data-autocenter="2"></span>
+    <span data-u="arrowright" class="jssora22r" style="top:0px;right:8px;width:40px;height:58px;" data-autocenter="2"></span>
+</div>
+<!-- #endregion Jssor Slider End -->
+<!-- ==============slideshow ends============= -->
+
+<!-- ==============home intro==================== -->
+<h2 class="greentag">  Access  |  Learn  |  Share  </h2>
+<div class="maintext">
+<p>CAT is an independent media center working to educate and enpower the community.</p>
+<p>Here in CAT, you can check-out professional multimedia equipments, enjoy our high quality studios, get hands-on trainings and share your works on our online/cable platforms!</p>
+<p>Here in CAT, you can fulfill your dream.<p/>
+</div>
+
+<div class="card-container">
+    <div class="card">
+        <img src="use.jpeg"/>
+        <p>CAT has an incredible amount of professional media production gear available to anyone who lives or works in Boone County. Go to Learn/Use to find out more about our resources.</p>
+    </div>
+    <div class="card">
+        <img src="learn.jpeg"/>
+        <p>We offer training courses in various media topics. Whether you're a seasoned pro or brand new to the video world, we have the staff and the tools to make you a producer in no time. </p>
+    </div>
+    <div class="card">
+        <img src="share.jpeg" />
+        <p>There's a number of different ways you can <strong>watch</strong> and <strong>share</strong> your show with tht community through CAT. We oofer cablecasting to more than 50,000 subscribers, <strong>LIVE</strong> webstream, podcasts and on-demand video at our website. </p>
+    </div>
+</div>
+<div class="maintext">
+<p>Beginning August 8, CAT's downtown community media center and offices will be OPEN WEEKLY WEDNESDAY through SATURDAY 12-8PM. We will be CLOSED Sundays, Mondays, & Tuesdays.</p>
+<p>Our HD Studios at Stephens College will be available Thursdays and Fridays 12-8, by appointment only.</p>
+</div>
+
+<!-- ========below is the main content: feature channels and twitter============ -->
+  <h2 class="greentag">Feature Channels</h2>
+<div class="homecontent">
+
+   <div class="videos">
+
+<div class="video1">
+
+<h4 class="videohead"><a href="https://www.youtube.com/user/ColumbiaAccess">CAT MADE</a></h4>
+
+<div class="videowrapper">
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/Aa93qYViWkQ?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+  <!-- <a href="https://www.youtube.com/user/ColumbiaAccess">
+<p id="Watchmore">watch more</p>
+  </a> -->
+</div>
+
+
+<div class="video2">
+
+<h4 class="videohead"><a href="https://www.youtube.com/user/ColumbiaAccess">FROM CAT MEMBERS</a></h4>
+
+<div class="videowrapper">
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/ZACmKBJ6WW0?rel=0" frameborder="0" allowfullscreen></iframe>
+</div>
+
+</div>
+
+<div class="video3">
+
+<h4 class="videohead"><a href="https://www.youtube.com/user/ColumbiaAccess">HOW DO YOU USE CAT?  </a></h4>
+
+<div class="videowrapper">
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/DTw4zovx358?rel=0" frameborder="0" allowfullscreen></iframe>
+
+</div>
+</div>
+
+<div class="video4">
+
+<h4 class="videohead"><a href="https://www.youtube.com/user/ColumbiaAccess">VOICES OF CAT</a></h4>
+
+    <div class="videowrapper">
+<iframe width="1280" height="720" src="https://www.youtube.com/embed/uIvmBhH17xk?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+</div>
+  </div>
+
+<div class="homeside">
+
+<div class="twitter">
+<a class="twitter-timeline" data-width="400" data-height="800" data-theme="light" data-link-color="#2B7BB9" href="https://twitter.com/columbiatv">Tweets by columbiatv</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+  <div class="quicklinks">
+  <aside class="quicklink1"><a href="learn.html"><img src="quicklink1.png"/></a></aside>
+  <aside class="quicklink1"><a href="learn.html"><img src="quicklink2.png"/></a></aside>
+  <aside class="quicklink1"><a href="membership.html"><img src="quicklink3.png"/></a></aside>
+  <aside class="quicklink1"><a href="submit.html"><img src="quicklink4.png"/></a></aside>
+  </div>
+</div>
+
+
+</div>
+<!-- ========end of the main content: feature channels and twitter============ -->
+
+    <br></br>
+    <br></br>
+
+<!-- ==============Calendar for shows and upcoming shows today================ -->
+<!-- <h2 class="greentag">Calendar</h2>
+<div class="calendarside">
+
+  <div id="calendar">
+    <iframe src="https://calendar.google.com/calendar/embed?showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=200&amp;wkst=1&amp;bgcolor=%2333cc00&amp;src=lrelqhkpm2tsobi23bsnk5ab4k%40group.calendar.google.com&amp;color=%23853104&amp;ctz=America%2FChicago" style="border-width:0" width="430" height="300" frameborder="0" scrolling="no"></iframe>
+</div>
+<div class="upnext">
+<h4 id="whatsup">What's up on CAT next</h4>
+<ul>
+<li>12:00 p.m. Awesome show</li>
+<li>13:00 p.m.Awesome show</li>
+<li>14:00 p.m.Awesome show</li>
+<li>15:00 p.m.Awesome show</li>
+<li>16:00 p.m.Awesome show</li>
+</ul>
+</div>
+</div> -->
+<!-- =======================Calendar for shows and upcoming shows today========================== -->
+
+
+<!-- =============footer============== -->
+      <div class="bottomlogo">
+        <ul>
+      <li><a href="https://www.facebook.com/columbiaaccesstv/"><img id="fb" src="facebooklogo.png" alt="facebook logo"/></a></li>
+      <li><a href="https://twitter.com/columbiatv"><img id="tw" src="twitter.png" alt="twitter logo"/></a></li>
+      <li><a href="https://www.youtube.com/user/columbiaaccess/featured"><img id="yt" src="youtube.png" alt="youtube logo"/></a></li>
+      <li><a href="https://vimeo.com/columbiatv"><img id="vm" src="Vimeo.png" alt="vimeo logo"/></a></li>
+    </ul>
+     </div>
+
+
+      <h5>Contact: 573.442.4447 | CAT Community Media Center: 23 North 10th Street, Columbia, MO | Copyright &copy; 2002-2010 Columbia Access Television Inc. All rights reserved.</h5>
+<!-- ===========footer=============== -->
+
+<!-- ========================This is important for burger menu==================== -->
+  <script src="menu.js" type="text/javascript"></script>
+
+
+  </body>
+</html>
